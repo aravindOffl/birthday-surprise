@@ -308,14 +308,28 @@ body {
 }
 
 .heart-icon {
-    width: 25px;
-    height: 25px;
-    margin-left: 5px;
     display: inline-block;
-    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iI2U5NDU2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTIgMjEuMzM3bC0xLjQxNC0xLjMxMUM1LjI1NCAxNS4zMTcgMiA5Ljk2NyAyIDYuNzY2IDIgNC4xNzQgNC4xNzQgMiA2Ljc2NiAyYzEuNDEzIDAgMi44MjcuNjI2IDMuODIzIDEuNjk2TDEyIDYuNjYzbDIuNDE4LTIuOTY3QzE1LjQxNyAyLjYyNiAxNi44MzQgMiAxOC4yNDYgMmMyLjU5MyAwIDQuNzY2IDIuMTc0IDQuNzY2IDQuNzY2IDAgMy4yMDItMy4yNTQgOC41NTItOC41ODYgMTMuMjYxTDEyIDIxLjMzN3oiLz48L3N2Zz4=");
-    background-size: contain;
-    background-repeat: no-repeat;
+    margin-left: 2px;
+    font-size: 24px; /* adjust size */
     vertical-align: middle;
+}
+
+.heart-icon::before {
+    content: "💗";
+}
+
+/* Add this animation to your CSS file */
+@keyframes heartbeat {
+    0% { transform: scale(1); }
+    25% { transform: scale(1.1); } /* Pumps up */
+    40% { transform: scale(1); }   /* Relax */
+    60% { transform: scale(1.1); } /* Pumps up again */
+    100% { transform: scale(1); }
+}
+
+.heart-icon {
+
+    animation: heartbeat 1.5s infinite ease-in-out;
 }
 
 /* --- Cake Styling --- */
