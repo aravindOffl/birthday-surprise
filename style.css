@@ -310,7 +310,7 @@ body {
 .heart-icon {
     display: inline-block;
     margin-left: 2px;
-    font-size: 24px; /* adjust size */
+    font-size: 20px; /* adjust size */
     vertical-align: middle;
 }
 
